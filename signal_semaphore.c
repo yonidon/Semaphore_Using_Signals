@@ -94,7 +94,7 @@ int main(void) {
 
     // Create worker threads that receive the signal
     for (int i = 0; i < THREAD_COUNT; i++) {
-        int *thread_num = malloc(sizeof(int));
+        int *thread_num = malloc(sizeof(int)); //Malloc to prevent a thread getting incorrect number
         *thread_num = i + 1;
         pthread_create(&threads[i], NULL, signal_receiving_thread, thread_num);
     }

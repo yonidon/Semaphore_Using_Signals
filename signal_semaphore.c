@@ -63,7 +63,7 @@ void *signal_receiving_thread(void *arg) {
     int sig;
     int result = sigwait(&waitset, &sig);
 
-    // If the thread catches the signal it enters the critical region
+    // If the thread catches the signal and semaphore is free, it enters the critical region
     if (result == 0 && sig == SIGUSR1 && semaphore == UP) {
         sem_down(); // Lock the Semaphore
         printf("[Thread %2d] Entering critical region...\n", thread_num);

@@ -1,5 +1,4 @@
 // Author    : Johnatan Dvoishes 
-// Student ID: 207375940 
 // Operating systems course Winter 2026
 
 // ========= SIGNAL BASED IMPLEMENTATION OF SEMAPHORES =========
